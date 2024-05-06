@@ -30,7 +30,11 @@
   "navigation": [
     {
       "group": "API Reference",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction",
+        "api-reference/endpoint/list-actions",
+        "api-reference/endpoint/create-action"
+      ]
     }
   ],
   "footerSocials": {
