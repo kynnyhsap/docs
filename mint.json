@@ -1,12 +1,25 @@
 {
-  "openapi": "https://api.integration.app/docs-json",
   "$schema": "https://mintlify.com/schema.json",
+
+  "openapi": "https://api.integration.app/docs-json",
+
+  "api": {
+    "baseUrl": "https://api.integration.app",
+    "auth": {
+      "method": "bearer"
+    }
+  },
+
   "name": "Integration.app API",
+
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/light.svg",
+    "href": "https://integration.app"
   },
+
   "favicon": "/favicon.svg",
+
   "colors": {
     "primary": "#6c57f2",
     "light": "#6c57f2",
@@ -20,6 +33,11 @@
     "name": "Console",
     "url": "https://console.integration.app"
   },
+  "topAnchor": {
+    "name": "API Reference",
+    "icon": "code",
+    "iconType": "duotone"
+  },
   "anchors": [
     {
       "name": "Blog",
@@ -29,11 +47,334 @@
   ],
   "navigation": [
     {
-      "group": "API Reference",
+      "group": "Actions",
       "pages": [
-        "api-reference/introduction",
-        "api-reference/endpoint/list-actions",
-        "api-reference/endpoint/create-action"
+        "api-reference/actions/list-actions",
+        "api-reference/actions/create-action",
+        "api-reference/actions/get-action-by-id",
+        "api-reference/actions/update-action-by-id",
+        "api-reference/actions/delete-action-by-id",
+        "api-reference/actions/patch-action-by-id",
+        "api-reference/actions/reset-action-by-id",
+        "api-reference/actions/apply-action-to-integrations",
+        "api-reference/actions/list-action-instances",
+        "api-reference/actions/get-action-for-integration",
+        "api-reference/actions/update-action-for-integration",
+        "api-reference/actions/archive-action-for-integration",
+        "api-reference/actions/patch-update-action-for-integration",
+        "api-reference/actions/reset-action-for-integration",
+        "api-reference/actions/list-actions-for-integration",
+        "api-reference/actions/create-action-for-integration",
+        "api-reference/actions/get-action-instance-for-connection",
+        "api-reference/actions/update-action-instance-for-connection",
+        "api-reference/actions/create-action-instance-for-connection",
+        "api-reference/actions/archive-action-instance-for-connection",
+        "api-reference/actions/patch-update-action-instance-for-connection",
+        "api-reference/actions/setup-action-instance-for-connection",
+        "api-reference/actions/reset-action-instance-for-connection",
+        "api-reference/actions/run-action-instance-for-connection",
+        "api-reference/actions/list-action-instances-for-connection"
+      ]
+    },
+    {
+      "group": "Flows",
+      "pages": [
+        "api-reference/flows/list-flows",
+        "api-reference/flows/create-flow",
+        "api-reference/flows/get-flow-by-id",
+        "api-reference/flows/update-flow-by-id",
+        "api-reference/flows/archive-flow-by-id",
+        "api-reference/flows/patch-flow-by-id",
+        "api-reference/flows/reset-flow-by-id",
+        "api-reference/flows/apply-flow-to-integrations",
+        "api-reference/flows/list-flows-for-integration",
+        "api-reference/flows/create-flow-for-integration",
+        "api-reference/flows/get-flow-for-integration",
+        "api-reference/flows/update-flow-for-integration",
+        "api-reference/flows/archive-flow-for-integration",
+        "api-reference/flows/patch-update-flow-for-integration",
+        "api-reference/flows/reset-flow-for-integration",
+        {
+          "group": "Flow Instances",
+          "pages": [
+            "api-reference/flow-instances/list-flow-instances",
+            "api-reference/flow-instances/get-flow-instance-by-id",
+            "api-reference/flow-instances/update-flow-instance-by-id",
+            "api-reference/flow-instances/create-flow-instance-by-id",
+            "api-reference/flow-instances/archive-flow-instance-by-id",
+            "api-reference/flow-instances/patch-flow-instance-by-id",
+            "api-reference/flow-instances/reset-flow-instance-by-id",
+            "api-reference/flow-instances/setup-flow-instance-by-id",
+            "api-reference/flow-instances/list-flow-instances-for-connection",
+            "api-reference/flow-instances/get-flow-instance-for-connection",
+            "api-reference/flow-instances/update-flow-instance-for-connection",
+            "api-reference/flow-instances/create-flow-instance-for-connection",
+            "api-reference/flow-instances/archive-flow-instance-for-connection",
+            "api-reference/flow-instances/patch-update-flow-instance-for-connection",
+            "api-reference/flow-instances/setup-flow-instance-for-connection",
+            "api-reference/flow-instances/reset-flow-instance-for-connection"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Flow Runs",
+      "pages": [
+        "api-reference/flows/list-flow-runs",
+        "api-reference/flows/get-flow-run",
+        "api-reference/flows/stop-flow-run",
+        "api-reference/flows/get-flow-run-output",
+        "api-reference/flows/get-node-runs",
+        "api-reference/flows/get-node-run",
+        "api-reference/flows/get-node-run-outputs",
+        "api-reference/flows/get-node-run-output",
+        "api-reference/flows/run-flow"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "api-reference/integrations/list-integrations",
+        "api-reference/integrations/create-integration",
+        "api-reference/integrations/get-integration",
+        "api-reference/integrations/update-integration",
+        "api-reference/integrations/patch-integration",
+        "api-reference/integrations/re-upload-integration",
+        "api-reference/integrations/update-integration-connector",
+        "api-reference/integrations/switch-integration-connector-version",
+        "api-reference/integrations/publish-integration-connector",
+        "api-reference/integrations/archive-integration",
+        "api-reference/integrations/setup-integration",
+        "api-reference/integrations/get-integration-connector-documentation",
+        "api-reference/integrations/get-integration-connector-spec",
+        "api-reference/integrations/reset-integration-parameters",
+        "api-reference/integrations/get-integration-connector-openapi-request-specs",
+        "api-reference/integrations/get-integration-connector-openapi-paths",
+        "api-reference/integrations/get-integration-connector-openapi-path-methods",
+        "api-reference/integrations/get-integration-connector-openapi-request-schema",
+        "api-reference/integrations/get-integration-connector-openapi-response-schema",
+        "api-reference/integrations/list-integration-operations",
+        "api-reference/integrations/get-integration-operation",
+        "api-reference/integrations/list-integration-data-locations",
+        "api-reference/integrations/get-integration-data-location",
+        "api-reference/integrations/list-integration-events",
+        "api-reference/integrations/get-integration-event",
+        "api-reference/integrations/list-integration-global-webhooks",
+        "api-reference/integrations/list-integration-data-collection-specs",
+        "api-reference/integrations/list-integration-udms",
+        "api-reference/integrations/get-integration-udm"
+      ]
+    },
+    {
+      "group": "Connections",
+      "pages": [
+        "api-reference/connections/list-connections",
+        "api-reference/connections/create-connection",
+        "api-reference/connections/get-connection",
+        "api-reference/connections/archive-connection",
+        "api-reference/connections/update-connection",
+        "api-reference/connections/list-connection-operations",
+        "api-reference/connections/get-connection-operation",
+        "api-reference/connections/run-connection-operation",
+        "api-reference/connections/list-connection-data-locations",
+        "api-reference/connections/get-connection-data-location",
+        "api-reference/connections/get-connection-data-location-method",
+        "api-reference/connections/test-connection",
+        "api-reference/connections/refresh-connection-credentials",
+        "api-reference/connections/make-connection-request",
+        "api-reference/connections/make-connection-request-1",
+        "api-reference/connections/make-connection-request-2",
+        "api-reference/connections/make-connection-request-3",
+        "api-reference/connections/make-connection-request-4",
+        "api-reference/connections/make-connection-request-5",
+        "api-reference/connections/make-connection-request-6",
+        "api-reference/connections/connection-proxy-request",
+        "api-reference/connections/connection-proxy-request-1",
+        "api-reference/connections/connection-proxy-request-2",
+        "api-reference/connections/connection-proxy-request-3",
+        "api-reference/connections/connection-proxy-request-4",
+        "api-reference/connections/connection-proxy-request-5",
+        "api-reference/connections/connection-proxy-request-6"
+      ]
+    },
+    {
+      "group": "Customers",
+      "pages": [
+        "api-reference/customers/list-customers",
+        "api-reference/customers/create-customer",
+        "api-reference/customers/get-customer",
+        "api-reference/customers/update-customer",
+        "api-reference/customers/delete-customer",
+        "api-reference/customers/patch-customer"
+      ]
+    },
+    {
+      "group": "Data Sources",
+      "pages": [
+        "api-reference/data-sources/list-data-sources",
+        "api-reference/data-sources/create-data-source",
+        "api-reference/data-sources/get-data-source",
+        "api-reference/data-sources/update-data-source",
+        "api-reference/data-sources/archive-data-source",
+        "api-reference/data-sources/patch-data-source",
+        "api-reference/data-sources/reset-data-source",
+        "api-reference/data-sources/apply-data-source-to-integrations",
+        "api-reference/data-sources/list-data-sources-for-integration",
+        "api-reference/data-sources/create-data-source-for-integration",
+        "api-reference/data-sources/get-data-source-for-integration",
+        "api-reference/data-sources/update-data-source-for-integration",
+        "api-reference/data-sources/archive-data-source-for-integration",
+        "api-reference/data-sources/patch-update-data-source-for-integration",
+        "api-reference/data-sources/reset-data-source-for-integration",
+        "api-reference/data-sources/list-data-source-instances",
+        "api-reference/data-sources/get-data-source-instance",
+        "api-reference/data-sources/update-data-source-instance",
+        "api-reference/data-sources/create-data-source-instance",
+        "api-reference/data-sources/archive-data-source-instance",
+        "api-reference/data-sources/patch-data-source-instance",
+        "api-reference/data-sources/setup-data-source-instance",
+        "api-reference/data-sources/reset-data-source-instance",
+        "api-reference/data-sources/list-data-source-instances-for-connection",
+        "api-reference/data-sources/get-data-source-instance-for-connection",
+        "api-reference/data-sources/update-data-source-instance-for-connection",
+        "api-reference/data-sources/create-data-source-instance-for-connection",
+        "api-reference/data-sources/archive-data-source-instance-for-connection",
+        "api-reference/data-sources/patch-update-data-source-instance-for-connection",
+        "api-reference/data-sources/setup-data-source-instance-for-connection",
+        "api-reference/data-sources/reset-data-source-instance-for-connection"
+      ]
+    },
+    {
+      "group": "Data Links",
+      "pages": [
+        "api-reference/data-links/list-data-link-tables",
+        "api-reference/data-links/create-data-link-table",
+        "api-reference/data-links/get-data-link-table",
+        "api-reference/data-links/update-data-link-table",
+        "api-reference/data-links/archive-data-link-table",
+        "api-reference/data-links/patch-data-link-table",
+        "api-reference/data-links/list-data-links",
+        "api-reference/data-links/delete-data-link",
+        "api-reference/data-links/list-data-link-table-instances",
+        "api-reference/data-links/get-data-link-table-instance",
+        "api-reference/data-links/update-data-link-table-instance",
+        "api-reference/data-links/create-data-link-table-instance",
+        "api-reference/data-links/archive-data-link-table-instance",
+        "api-reference/data-links/path-data-link-table-instance",
+        "api-reference/data-links/get-data-link-table-instance-links",
+        "api-reference/data-links/create-data-link-table-instance-link",
+        "api-reference/data-links/delete-data-link-table-instance-link"
+      ]
+    },
+    {
+      "group": "Field Mappings",
+      "pages": [
+        "api-reference/field-mappings/list-field-mappings",
+        "api-reference/field-mappings/create-field-mapping",
+        "api-reference/field-mappings/get-field-mapping",
+        "api-reference/field-mappings/update-field-mapping",
+        "api-reference/field-mappings/archive-field-mapping",
+        "api-reference/field-mappings/patch-field-mapping",
+        "api-reference/field-mappings/reset-field-mapping",
+        "api-reference/field-mappings/apply-field-mapping-to-integrations",
+        "api-reference/field-mappings/get-field-mapping-app-schema",
+        "api-reference/field-mappings/get-filed-mapping-for-integration",
+        "api-reference/field-mappings/update-filed-mapping-for-integration",
+        "api-reference/field-mappings/archive-filed-mapping-for-integration",
+        "api-reference/field-mappings/patch-update-filed-mapping-for-integration",
+        "api-reference/field-mappings/reset-filed-mapping-for-integration",
+        "api-reference/field-mappings/get-field-mapping-app-schema-for-integration",
+        "api-reference/field-mappings/list-filed-mappings-for-integration",
+        "api-reference/field-mappings/create-filed-mapping-for-integration",
+        "api-reference/field-mappings/list-field-mapping-instances",
+        "api-reference/field-mappings/get-field-mapping-instance",
+        "api-reference/field-mappings/update-field-mapping-instance",
+        "api-reference/field-mappings/create-field-mapping-instance",
+        "api-reference/field-mappings/delete-field-mapping-instance",
+        "api-reference/field-mappings/patch-field-mapping-instance",
+        "api-reference/field-mappings/setup-field-mapping-instance",
+        "api-reference/field-mappings/reset-field-mapping-instance",
+        "api-reference/field-mappings/get-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/update-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/create-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/archive-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/patch-update-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/setup-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/reset-field-mapping-instance-for-connection",
+        "api-reference/field-mappings/list-field-mapping-instances-for-connection"
+      ]
+    },
+    {
+      "group": "App Data Schemas",
+      "pages": [
+        "api-reference/app-data-schemas/list-app-data-schemas",
+        "api-reference/app-data-schemas/create-app-data-schema",
+        "api-reference/app-data-schemas/get-app-data-schema",
+        "api-reference/app-data-schemas/update-app-data-schema",
+        "api-reference/app-data-schemas/archive-app-data-schema",
+        "api-reference/app-data-schemas/patch-app-data-schema",
+        "api-reference/app-data-schemas/get-app-data-schema-1",
+        "api-reference/app-data-schemas/update-app-data-schema-1",
+        "api-reference/app-data-schemas/archive-app-data-schema-1",
+        "api-reference/app-data-schemas/patch-app-data-schema-1",
+        "api-reference/app-data-schemas/list-app-data-schema-instances",
+        "api-reference/app-data-schemas/get-app-data-schema-instance",
+        "api-reference/app-data-schemas/update-app-data-schema-instance",
+        "api-reference/app-data-schemas/create-app-data-schema-instance",
+        "api-reference/app-data-schemas/archive-app-data-schema-instance",
+        "api-reference/app-data-schemas/patch-app-data-schema-instance",
+        "api-reference/app-data-schemas/setup-app-data-schema-instance"
+      ]
+    },
+    {
+      "group": "App Events",
+      "pages": [
+        "api-reference/app-events/list-app-event-types",
+        "api-reference/app-events/create-app-event-type",
+        "api-reference/app-events/get-app-event-type",
+        "api-reference/app-events/update-app-event-type",
+        "api-reference/app-events/archive-app-event-type",
+        "api-reference/app-events/patch-app-event-type",
+        "api-reference/app-events/get-app-event-type-schema",
+        "api-reference/app-events/list-app-events",
+        "api-reference/app-events/get-app-event",
+        "api-reference/app-events/list-app-event-subscriptions",
+        "api-reference/app-events/get-app-event-subscription",
+        "api-reference/app-events/update-app-event-subscription",
+        "api-reference/app-events/create-app-event-subscription",
+        "api-reference/app-events/archive-app-event-subscription",
+        "api-reference/app-events/patch-app-event-subscription",
+        "api-reference/app-events/get-app-event-subscription-schema",
+        "api-reference/app-events/subscribe-to-app-event-subscription"
+      ]
+    },
+    {
+      "group": "External Events",
+      "pages": [
+        "api-reference/external-events/list-external-event-subscriptions",
+        "api-reference/external-events/get-external-event-subscription",
+        "api-reference/external-events/delete-external-event-subscription",
+        "api-reference/external-events/setup-external-event-subscription",
+        "api-reference/external-events/subscribe-to-external-event-subscription",
+        "api-reference/external-events/unsubscribe-from-external-event-subscription",
+        "api-reference/external-events/resubscribe-to-external-event-subscription",
+        "api-reference/external-events/triggers-pull-events-for-external-event-subscription",
+        "api-reference/external-events/list-external-event-pulls",
+        "api-reference/external-events/get-external-event-pull",
+        "api-reference/external-events/get-external-event-pull-logs",
+        "api-reference/external-events/list-external-event-log-records",
+        "api-reference/external-events/get-external-event-log-record"
+      ]
+    },
+    {
+      "group": "Scenarios",
+      "pages": [
+        "api-reference/scenarios/list-scenarios",
+        "api-reference/scenarios/create-scenario",
+        "api-reference/scenarios/get-scenario",
+        "api-reference/scenarios/put-scenario",
+        "api-reference/scenarios/archive-scenario",
+        "api-reference/scenarios/patch-scenario"
       ]
     }
   ],
